@@ -10,7 +10,7 @@ def main():
         # You can draw the mole with this snippet:
         # screen.blit(mole_image, mole_image.get_rect(topleft=(x,y)))
         # BELLOOOOOOO
-        mole_image = pygame.image.load("minion_mole.png")
+        mole_image = pygame.image.load("mole.png")
         screen = pygame.display.set_mode((640, 512))
         clock = pygame.time.Clock()
         running = True
@@ -25,8 +25,8 @@ def main():
                 if event.type == pygame.QUIT:
                     running = False
             screen.fill("light blue")
-            screen.blit(pygame.image.load("minion_background.png"), pygame.image.load(
-                "minion_background.png").get_rect(topleft=(0, 0)))
+            screen.blit(pygame.image.load("bg.png"), pygame.image.load(
+                "bg.png").get_rect(topleft=(0, 0)))
             screen.blit(mole_image, mole_image.get_rect(topleft=(grid(moleCords[0], moleCords[1]))))
             for i in range(20):
                 pygame.draw.line(screen, "white", (32*i, 0), (32*i, 512))
